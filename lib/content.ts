@@ -195,14 +195,14 @@ export const publications: Publication[] = [
    ============================================================ */
 
 export const certificates: Certificate[] = [
-  {
+   {
     title: "Class X School Topper – Academic Achievement",
     issuer: "Sri Vidya Mandir Hr Sec School (CBSE)",
     location: "Salem, Tamil Nadu",
     date: "2021",
     category: "Academic Achievement",
-    image_url: "/images/certificates/classx.jpg",
-    pdf_url: "#",
+    image_url: "/images/profile/classx.jpeg", // <-- Fixed folder and extension
+    pdf_url: "/images/profile/classx.jpeg",   // <-- Added this so the download button works!
     description:
       "Secured First Rank in Class XII, achieving the highest academic performance in the school."
   },
