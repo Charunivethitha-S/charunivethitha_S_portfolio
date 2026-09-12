@@ -135,8 +135,8 @@ export const experiences: Experience[] = [
     organization: "National Institute of Technology (NIT), Tiruchirappalli",
     role: "FPGA Prototyping & Hardware Security Intern",
     location: "Tiruchirappalli, Tamil Nadu",
-    start_date: "May 2025",
-    end_date: "June 2025",
+    start_date: "May 2026",
+    end_date: "June 2026",
     description:
       "Designed and prototyped the AgriNN INT8-quantized neural network accelerator and zero-latency combinational neural engine on Zynq-7020 (ZedBoard) and Zynq UltraScale+ KCU106 FPGA platforms. Implemented a custom 16-core INT8 MAC systolic array with AXI4-Stream datapath and combinational inference pipeline achieving <10 ms and ~5 ns latency.",
     technologies: [
@@ -196,15 +196,15 @@ export const publications: Publication[] = [
 
 export const certificates: Certificate[] = [
   {
-    title: "VLSI Fundamentals & HDL Smart Lab Course",
-    issuer: "NIEL, Calicut",
-    location: "Calicut, Kerala",
-    date: "2025",
-    category: "VLSI & RTL",
-    image_url: "/images/certificates/niel_vlsi.jpg",
+    title: "Class X School Topper – Academic Achievement",
+    issuer: "Sri Vidya Mandir Hr Sec School (CBSE)",
+    location: "Salem, Tamil Nadu",
+    date: "2021",
+    category: "Academic Achievement",
+    image_url: "/images/certificates/classx.jpg",
     pdf_url: "#",
     description:
-      "Professional coursework covering VLSI fundamentals, digital design methodologies, and hardware description languages (Verilog & SystemVerilog) under the Smart Lab project."
+      "Secured First Rank in Class XII, achieving the highest academic performance in the school."
   },
   {
     title: "HDL Programming in Verilog — Summer Course",
