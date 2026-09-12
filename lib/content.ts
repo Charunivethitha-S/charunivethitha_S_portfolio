@@ -207,27 +207,40 @@ export const certificates: Certificate[] = [
       "Secured First Rank in Class XII, achieving the highest academic performance in the school."
   },
   {
-    title: "HDL Programming in Verilog — Summer Course",
-    issuer: "Sona College of Technology",
-    location: "Salem, Tamil Nadu",
-    date: "2025",
-    category: "FPGA & HDL",
-    image_url: "/images/certificates/sona_hdl.jpg",
-    pdf_url: "#",
+    title: "Tech Spectrum – 3rd Prize in ECE Circuit Building",
+    issuer: "SRM Institute of Science and Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "25th Oct 2024",
+    category: "Technical Competition / ECE Circuit Design",
+    image_url: "/images/profile/tech_spectrum.jpeg",
+    pdf_url: "/images/profile/tech_spectrum.jpeg",
     description:
-      "1-month intensive summer program advancing HDL programming in Verilog, modular RTL design, FSM architectures, and FPGA synthesis on Xilinx platforms."
+      "Secured Third Prize in Tech Spectrum for designing and building electronic circuits as part of an ECE-based technical competition."
   },
+   
   {
-    title: "Python Programming & AI Fundamentals",
-    issuer: "IBM Skills Network",
-    location: "Online / Digital Badge",
-    date: "2025",
-    category: "Programming",
-    image_url: "/images/certificates/ibm_python.jpg",
-    pdf_url: "#",
+    title: "National-Level Workshop on Drone Assembly & Programming",
+    issuer: "Jet Aerospace Drone Manufacturing Hub",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "11 Nov 2024 - 15 Nov 2024",
+    category: "Technical Workshop / Aerospace & Robotics",
+    image_url: "/images/certificates/drone.jpg",
+    pdf_url: "/images/certificates/drone.jpg",
     description:
-      "Certified in Python programming with verified IBM Skills Network Digital Badge, covering data structures, algorithmic logic, and technical computing."
+      "Successfully completed a five-day national-level workshop on drone assembling and programming, conducted from 11–15 November 2025."
+  },
+     {
+    title: "Yuva 2025 – National-Level 24-Hour Hackathon",
+    issuer: "SRM Institute of Science and Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "16-17 Sep 2025",
+    category: "Hackathon",
+    image_url: "/images/profile/yuva.jpeg", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/yuva.jpeg",  // What downloads when they click the button
+    description: "Completed an advanced course in SystemVerilog..."
   }
+
+    
 ];
 
 /* ============================================================
