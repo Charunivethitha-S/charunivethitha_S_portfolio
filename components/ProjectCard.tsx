@@ -11,32 +11,8 @@ export default function ProjectCard({ project, index }: { project: Project; inde
     ? project.software 
     : project.technologies.slice(2);
 
-  const mainImage = project.gallery && project.gallery.length > 0 ? project.gallery[0].url : null;
-
   return (
-    <Link href={`/projects/${project.slug}`} className="project-card-v2 group block">
-      {/* Top Image Preview for Each Slide / Card */}
-      {mainImage && (
-        <div className="relative w-full aspect-video bg-[#05070a] rounded-xl overflow-hidden mb-4 border border-[#1e293b] flex items-center justify-center">
-          <img
-            src={mainImage}
-            alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            onError={(e) => {
-              const img = e.currentTarget;
-              const src = img.src;
-              if (src.endsWith('.png')) {
-                img.src = src.replace('.png', '.jpeg');
-              } else if (src.endsWith('.jpeg')) {
-                img.src = src.replace('.jpeg', '.jpg');
-              } else if (src.endsWith('.jpg')) {
-                img.src = src.replace('.jpg', '.PNG');
-              }
-            }}
-          />
-        </div>
-      )}
-
+    <Link href={`/projects/${project.slug}`} className="project-card-v2">
       {/* Card Header: Category & Timeline */}
       <div className="card-top-row">
         <span className="card-cat-badge">0{index + 1} / {project.category}</span>
