@@ -18,7 +18,7 @@ import {
   Calendar,
   MapPin,
   FileCheck,
-  Award
+  Award,
 } from "lucide-react";
 
 import Nav from "@/components/Nav";
@@ -38,13 +38,7 @@ import {
 export default function Home() {
   const [projectIndex, setProjectIndex] = useState(0);
   const certsRef = useRef<HTMLDivElement>(null);
-
-  const scrollCerts = (direction: 'left' | 'right') => {
-    if (certsRef.current) {
-      const scrollAmount = direction === 'left' ? -340 : 340;
-      certsRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
+  const addProjRef = useRef<HTMLDivElement>(null);
 
   const featuredProjects = projects.filter((p) => p.featured);
   const additionalProjects = projects.filter((p) => !p.featured);
@@ -56,9 +50,7 @@ export default function Home() {
 
   const nextProject = () =>
     setProjectIndex((i) =>
-      featuredProjects.length > 0
-        ? (i + 1) % featuredProjects.length
-        : 0
+      featuredProjects.length > 0 ? (i + 1) % featuredProjects.length : 0
     );
 
   const prevProject = () =>
@@ -68,18 +60,34 @@ export default function Home() {
         : 0
     );
 
+  const scrollCerts = (direction: "left" | "right") => {
+    if (certsRef.current) {
+      certsRef.current.scrollBy({
+        left: direction === "left" ? -340 : 340,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollAddProj = (direction: "left" | "right") => {
+    if (addProjRef.current) {
+      addProjRef.current.scrollBy({
+        left: direction === "left" ? -380 : 380,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <Nav />
 
       <main>
-
         {/* ========================================================
-            HERO SECTION (STRAIGHT ALIGNED TWO RECTANGLES)
+            HERO SECTION
             ======================================================== */}
         <section className="hero" id="home">
           <div className="container hero-grid">
-
             {/* LEFT COLUMN */}
             <div>
               <div className="eyebrow">
@@ -128,38 +136,27 @@ export default function Home() {
                   <Github size={16} />
                 </a>
 
-                <a
-                  href="mailto:charunivethithas@gmail.com"
-                  aria-label="Email"
-                >
+                <a href="mailto:charunivethithas@gmail.com" aria-label="Email">
                   <Mail size={16} />
                 </a>
               </div>
             </div>
 
-            {/* RIGHT COLUMN: TWO STRAIGHT RECTANGLES (NO TILT) */}
+            {/* RIGHT COLUMN: STRAIGHT RECTANGLES */}
             <div className="hero-side-straight">
-              
-              {/* Outer Rectangle: Semiconductor Hardware Frame */}
               <div className="hero-outer-rect">
-                
-                {/* Clean Corner Tech Accents */}
                 <div className="rect-corner tl" />
                 <div className="rect-corner tr" />
                 <div className="rect-corner bl" />
                 <div className="rect-corner br" />
 
-                <div className="rect-badge">
-                  RTL → FPGA → SILICON
-                </div>
+                <div className="rect-badge">RTL → FPGA → SILICON</div>
 
-                {/* Inner Rectangle: Photo Frame */}
                 <div className="hero-inner-rect">
                   <img
                     src="/images/profile/charunivethitha.jpg"
                     alt="Charunivethitha S"
                     onError={(e) => {
-                      // Fallback if image path differs
                       (e.target as HTMLImageElement).src =
                         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80";
                     }}
@@ -169,14 +166,10 @@ export default function Home() {
                     <span>ECE / VLSI</span>
                   </div>
                 </div>
-
               </div>
-
             </div>
-
           </div>
         </section>
-
 
         {/* ========================================================
             MARQUEE TRACK
@@ -200,16 +193,12 @@ export default function Home() {
           </div>
         </div>
 
-
         {/* ========================================================
             01 ABOUT & ENGINEERING FOCUS
             ======================================================== */}
         <section className="section" id="about">
           <div className="container">
-            
             <div className="about-box">
-              
-              {/* Left Column: Clear, concise statement */}
               <div className="about-left">
                 <div className="section-kicker">01 — about & focus</div>
                 <h2>Silicon-Minded Engineering with an AI Edge.</h2>
@@ -218,9 +207,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Right Column: 4-Pillar Focus Grid */}
               <div className="focus-grid">
-                
                 <div className="focus-card">
                   <div className="focus-card-top">
                     <Cpu size={16} />
@@ -252,45 +239,33 @@ export default function Home() {
                   </div>
                   <p>Post-quantum cryptography (Kyber-1024), ChaCha20 cipher, and Hardware Root-of-Trust.</p>
                 </div>
-
               </div>
-
             </div>
-
           </div>
         </section>
-
 
         {/* ========================================================
             02 FEATURED PROJECTS
             ======================================================== */}
         <section className="section" id="projects">
           <div className="container">
-
             <SectionHeader
               kicker="02 — featured projects"
               title="Built in Hardware."
-              text="Selected architectures across post-quantum cryptography, edge-AI acceleration, and neuromorphic computing."
+              text="Selected architectures across post-quantum cryptography, edge-AI acceleration, NoC sensor fusion, and neuromorphic computing."
             />
 
             <div className="project-browser">
-
               {project && (
                 <>
                   <div className="project-controls">
-                    <button
-                      onClick={prevProject}
-                      aria-label="Previous project"
-                    >
+                    <button onClick={prevProject} aria-label="Previous project">
                       <ChevronLeft size={18} />
                     </button>
 
                     <div>
                       <span className="mono">
-                        PROJECT{" "}
-                        {String(projectIndex + 1).padStart(2, "0")}
-                        {" / "}
-                        {String(featuredProjects.length).padStart(2, "0")}
+                        PROJECT {String(projectIndex + 1).padStart(2, "0")} / {String(featuredProjects.length).padStart(2, "0")}
                       </span>
 
                       <div className="project-dots">
@@ -305,58 +280,54 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <button
-                      onClick={nextProject}
-                      aria-label="Next project"
-                    >
+                    <button onClick={nextProject} aria-label="Next project">
                       <ChevronRight size={18} />
                     </button>
                   </div>
 
-                  <ProjectCard
-                    project={project}
-                    index={projectIndex}
-                  />
+                  <ProjectCard project={project} index={projectIndex} />
                 </>
               )}
-
             </div>
 
-            {/* Additional Projects Grid */}
+            {/* ADDITIONAL HARDWARE PROJECTS CAROUSEL */}
             {additionalProjects.length > 0 && (
-              <div style={{ marginTop: "40px" }}>
-                <div className="section-kicker" style={{ marginBottom: "16px" }}>
-                  additional hardware projects
+              <div style={{ marginTop: "60px" }}>
+                <div className="certs-header-row">
+                  <div>
+                    <div className="section-kicker">additional hardware & applied projects</div>
+                    <h3 style={{ fontSize: "24px", fontWeight: 800, margin: "4px 0 0", color: "#fff" }}>
+                      Engineering Prototypes & IoT Systems
+                    </h3>
+                  </div>
+
+                  <div className="certs-nav-buttons">
+                    <button onClick={() => scrollAddProj("left")} aria-label="Previous additional projects">
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button onClick={() => scrollAddProj("right")} aria-label="Next additional projects">
+                      <ChevronRight size={20} />
+                    </button>
+                  </div>
                 </div>
 
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                    gap: "18px",
-                  }}
-                >
+                <div className="certs-carousel" ref={addProjRef}>
                   {additionalProjects.map((proj, idx) => (
-                    <ProjectCard
-                      key={proj.slug}
-                      project={proj}
-                      index={idx}
-                    />
+                    <div key={proj.slug} style={{ flex: "0 0 380px", width: "380px" }}>
+                      <ProjectCard project={proj} index={idx} />
+                    </div>
                   ))}
                 </div>
               </div>
             )}
-
           </div>
         </section>
-
 
         {/* ========================================================
             03 PUBLICATIONS & PATENTS
             ======================================================== */}
         <section className="section" id="publications-patents">
           <div className="container">
-
             <SectionHeader
               kicker="03 — publications & patents"
               title="Research & Intellectual Property."
@@ -364,8 +335,6 @@ export default function Home() {
             />
 
             <div className="pub-pat-grid">
-
-              {/* Patents Column */}
               <div>
                 <div className="pub-pat-col-title">
                   <Award size={18} style={{ color: "var(--gold)" }} />
@@ -386,7 +355,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Publications Column */}
               <div>
                 <div className="pub-pat-col-title">
                   <FileCheck size={18} style={{ color: "var(--cyan)" }} />
@@ -407,19 +375,15 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
             </div>
-
           </div>
         </section>
-
 
         {/* ========================================================
             04 EXPERIENCE
             ======================================================== */}
         <section className="section" id="experience">
           <div className="container">
-
             <SectionHeader
               kicker="04 — experience"
               title="Engineering & Research Experience."
@@ -432,43 +396,41 @@ export default function Home() {
                   <div className="date">
                     {e.start_date} — {e.end_date || "Present"}
                   </div>
-
                   <h3>{e.organization}</h3>
-                  <div className="role-title">{e.role} {e.location && `· ${e.location}`}</div>
-
+                  <div className="role-title">
+                    {e.role} {e.location && `· ${e.location}`}
+                  </div>
                   <p>{e.description}</p>
-
                   <div className="tags">
                     {e.technologies.map((t) => (
-                      <span className="tag" key={t}>{t}</span>
+                      <span className="tag" key={t}>
+                        {t}
+                      </span>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </section>
-
 
         {/* ========================================================
             05 CERTIFICATES
             ======================================================== */}
         <section className="section" id="certificates">
           <div className="container">
-
             <div className="certs-header-row">
               <SectionHeader
                 kicker="05 — technical certificates"
                 title="Specialized Training & Certifications."
                 text="Verified coursework in VLSI fundamentals, HDL programming, and applied computing."
               />
-              
+
               <div className="certs-nav-buttons">
-                <button onClick={() => scrollCerts('left')} aria-label="Previous certificates">
+                <button onClick={() => scrollCerts("left")} aria-label="Previous certificates">
                   <ChevronLeft size={20} />
                 </button>
-                <button onClick={() => scrollCerts('right')} aria-label="Next certificates">
+                <button onClick={() => scrollCerts("right")} aria-label="Next certificates">
                   <ChevronRight size={20} />
                 </button>
               </div>
@@ -477,23 +439,20 @@ export default function Home() {
             <div className="certs-carousel" ref={certsRef}>
               {certificates.map((cert) => (
                 <div className="cert-card-v2" key={cert.title}>
-                  
-                  {/* Certificate Image Preview Header */}
                   <div className="cert-img-header">
                     {cert.image_url && cert.image_url !== "#" ? (
-                      <img 
-                        src={cert.image_url} 
+                      <img
+                        src={cert.image_url}
                         alt={cert.title}
                         onError={(e) => {
-                          // Hide image and show placeholder if file not uploaded yet
                           (e.target as HTMLElement).style.display = "none";
                           const placeholder = (e.target as HTMLElement).parentElement?.querySelector(".cert-img-placeholder");
                           if (placeholder) (placeholder as HTMLElement).style.display = "flex";
                         }}
                       />
                     ) : null}
-                    
-                    <div 
+
+                    <div
                       className="cert-img-placeholder"
                       style={{ display: cert.image_url ? "none" : "flex" }}
                     >
@@ -502,7 +461,6 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Certificate Body */}
                   <div className="cert-body">
                     {cert.category && <span className="cert-cat-pill">{cert.category}</span>}
                     <h3>{cert.title}</h3>
@@ -532,21 +490,17 @@ export default function Home() {
                       <span>Download Certificate</span>
                     </a>
                   </div>
-
                 </div>
               ))}
             </div>
-
           </div>
         </section>
-
 
         {/* ========================================================
             06 EVENTS & HACKATHONS
             ======================================================== */}
         <section className="section" id="events">
           <div className="container">
-
             <SectionHeader
               kicker="06 — hackathons & technical events"
               title="Competitions & Technical Sprint."
@@ -567,17 +521,14 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
           </div>
         </section>
-
 
         {/* ========================================================
             07 CONTACT SECTION
             ======================================================== */}
         <section className="section no-border" id="contact">
           <div className="container">
-
             <div className="contact-box">
               <div>
                 <div className="section-kicker">07 — contact</div>
@@ -614,24 +565,14 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
           </div>
         </section>
-
       </main>
 
-
-      {/* ========================================================
-          FOOTER
-          ======================================================== */}
       <footer className="footer">
         <div className="container footer-row">
-          <span>
-            © {new Date().getFullYear()} CHARUNIVETHITHA S · B.TECH ECE
-          </span>
-          <span className="mono">
-            VLSI · RTL · FPGA · EDGE AI · HARDWARE SECURITY
-          </span>
+          <span>© {new Date().getFullYear()} CHARUNIVETHITHA S · B.TECH ECE</span>
+          <span className="mono">VLSI · RTL · FPGA · EDGE AI · HARDWARE SECURITY</span>
         </div>
       </footer>
     </>
