@@ -224,8 +224,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "11 Nov 2024 - 15 Nov 2024",
     category: "Technical Workshop / Aerospace & Robotics",
-    image_url: "/images/certificates/drone.jpeg",
-    pdf_url: "/images/certificates/drone.jepg",
+    image_url: "/images/profile/drone.jpeg",
+    pdf_url: "/images/profile/drone.jpeg",
     description:
       "Successfully completed a five-day national-level workshop on drone assembling and programming, conducted from 11–15 November 2025."
   },
@@ -235,8 +235,8 @@ export const certificates: Certificate[] = [
     location: "Online",
     date: "April 2025",
     category: "Placement Preparation",
-    image_url: "/images/certificates/udemy.jpeg",
-    pdf_url: "/images/certificates/udemy.jepg",
+    image_url: "/images/profile/udemy.jpeg",
+    pdf_url: "/images/profile/udemy.jpeg",
     description:
       "Enrolled in a Udemy course on quantitative aptitude to strengthen numerical reasoning and problem-solving skills for placement assessments."
   },
@@ -356,8 +356,8 @@ export const certificates: Certificate[] = [
     location: "Smt. Kashibai Navale College of Engineering, Pune, Maharashtra",
     date: "12 August 2026",
     category: "IEEE Project Contest",
-    image_url: "/images/profile/Project.pdf", // The image you uploaded to the public folder
-    pdf_url:"/images/profile/Project.pdf",  // What downloads when they click the button
+    image_url: "/images/profile/Project contest Certificate.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/Project contest Certificate.pdf",  // What downloads when they click the button
     description: "Participated in a national-level project contest and presented a Time-Multiplexed Neural Network project, conducted by IEEE Pune Section"
        },
 
