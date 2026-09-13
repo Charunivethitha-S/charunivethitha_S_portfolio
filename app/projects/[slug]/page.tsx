@@ -7,8 +7,13 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -194,15 +199,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       src={img.url}
                       alt={img.caption}
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        // Automatic fallback for .jpeg / .jpg extensions
-                        const target = e.currentTarget;
-                        if (target.src.endsWith('.png')) {
-                          target.src = target.src.replace('.png', '.jpeg');
-                        } else if (target.src.endsWith('.jpeg')) {
-                          target.src = target.src.replace('.jpeg', '.jpg');
-                        }
-                      }}
                     />
                   </div>
                   <p className="text-xs text-[#9ca3af] font-mono leading-relaxed px-1">
