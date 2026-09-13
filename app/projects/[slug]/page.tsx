@@ -161,7 +161,7 @@ export default async function ProjectPage({
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
               {project.gallery.map((img, idx) => (
                 <div key={idx} className="pub-pat-card" style={{ padding: "14px", margin: 0 }}>
-                  <div style={{ width: "100%", maxHeight: "320px", borderRadius: "12px", overflow: "hidden", background: "#000", display: "flex", itemsCenter: "center", justifyContent: "center" }}>
+                  <div style={{ width: "100%", maxHeight: "320px", borderRadius: "12px", overflow: "hidden", background: "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <img
                       src={img.url}
                       alt={img.caption}
