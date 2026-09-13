@@ -224,10 +224,21 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "11 Nov 2024 - 15 Nov 2024",
     category: "Technical Workshop / Aerospace & Robotics",
-    image_url: "/images/certificates/drone.jpg",
-    pdf_url: "/images/certificates/drone.jpg",
+    image_url: "/images/certificates/drone.jpeg",
+    pdf_url: "/images/certificates/drone.jepg",
     description:
       "Successfully completed a five-day national-level workshop on drone assembling and programming, conducted from 11–15 November 2025."
+  },
+     {
+    title: "Quantitative Aptitude for Placements – Udemy",
+    issuer: "Udemy",
+    location: "Online",
+    date: "April 2025",
+    category: "Placement Preparation",
+    image_url: "/images/certificates/udemy.jpeg",
+    pdf_url: "/images/certificates/udemy.jepg",
+    description:
+      "Enrolled in a Udemy course on quantitative aptitude to strengthen numerical reasoning and problem-solving skills for placement assessments."
   },
      {
     title: "Yuva 2025 – National-Level 24-Hour Hackathon",
@@ -238,8 +249,128 @@ export const certificates: Certificate[] = [
     image_url: "/images/profile/yuva.jpeg", // The image you uploaded to the public folder
     pdf_url:"/images/profile/yuva.jpeg",  // What downloads when they click the button
     description: "Completed an advanced course in SystemVerilog..."
-  }
+  },
 
+    
+     {
+    title: "Faculty Development Program – Antenna Design for Advanced 5G Applications",
+    issuer: "SRM Institute of Science and Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "24-25 September 2025",
+    category: "Faculty Development Program",
+    image_url: "/images/profile/5g_application.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/5g_application.pdf",  // What downloads when they click the button
+    description: "Attended a five-day Faculty Development Program on antenna design for advanced 5G applications"
+  },
+   
+   {
+    title: "International Conference Paper Presentation – ICIES’25",
+    issuer: "Jeppiaar Institute of Technology",
+    location: "Chennai, Tamil Nadu",
+    date: "7–8 November 2025",
+    category: "Research Conference",
+    image_url: "/images/profile/ICIEC.jpeg",
+    pdf_url: "/images/profile/ICIEC.jpeg",
+    description:
+      "Presented the paper “Implementation of HKDF for ChaCha20 Key Generation” at the First International Conference on Innovations in Electronics and Communication (ICIES’25)"
+  },
+      {
+    title: "Industry Connect Student Training Program – Frequency Selective Surfaces",
+    issuer: "SRM Institute of Science and Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "27–28 November and 3–5 December 2025",
+    category: "Industry Training",
+    image_url: "/images/profile/industry_training.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/industry_training.pdf",  // What downloads when they click the button
+    description: "Attended a five-day industry connect training program on exploring Frequency Selective Surfaces using CST Studio Suite"
+  },
+
+    {
+    title: "VLSI Project Intern – CODEC Technologies",
+    issuer: "CODEC Technologied",
+    location: "Hyderabad, Telangana",
+    date: " 29 December 2025 to 29 January 2026",
+    category: "Internship",
+    image_url: "/images/profile/CodecTechnologies.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/CodecTechnologies.pdf",  // What downloads when they click the button
+    description: "Completed a one-month VLSI project internship at CODEC Technologies, working on the implementation of digital circuits using Verilog HDL."
+  },
+
+    {
+    title: "TNWISE–TANCAM Hackathon – Smart Agriculture & Rural Innovation",
+    issuer: "Excellence for Advanced Manufacturing (TANCAM)",
+    location: "Coimbatore, Tamil Nadu",
+    date: "16 march 2026",
+    category: "Hackathon",
+    image_url: "/images/profile/tancam.jpeg", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/tancam.jpeg",  // What downloads when they click the button
+    description: "Participated in the TNWISE–TANCAM Hackathon on “Smart Agriculture and Rural Innovation” and developed a Smart Irrigation System for sustainable agricultural applications"
+  },
+
+    {
+    title: "Code-a-thon – Student Performance & Attendance Monitoring System",
+    issuer: "SRM Institute of Science and Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "18 march 2026",
+    category: "Hackathon",
+    image_url: "/images/profile/website.jpeg", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/website.jpeg",  // What downloads when they click the button
+    description: "Participated in the Code-a-thon and developed a web-based Student Performance and Attendance Monitoring System to track individual student academic performance and attendance across a college"
+  },
+ {
+    title: "SIH Innovate Ideathon 2K26 – Final Round Selection",
+    issuer: "SRM Institute of Science and Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: "18 march 2026",
+    category: "Hackathon",
+    image_url: "/images/profile/ideathon.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/ideathon.pdf",  // What downloads when they click the button
+    description: "Participated in the Internal SIH Innovate Ideathon 2K26 and was selected for the final round of Smart India Hackathon (SIH) 2026 under the theme “IoT Automation"
+  },
+
+    {
+    title: "Hardware Research Intern – NIT Tiruchirappalli",
+    issuer: "National Institute of Technology",
+    location: "Tiruchirapalli, Tamil Nadu",
+    date: " 25 May 2026- 25 June 2026",
+    category: "Internship",
+    image_url: "/images/profile/NIT.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/NIT.pdf",  // What downloads when they click the button
+    description: "Completed a one-month hardware research internship at NIT Tiruchirappalli from May to June 2026, working on neuromorphic computing and spiking neural-network architectures"
+  },
+
+    {
+    title: "IEEE International Conference – Paper Presentation",
+    issuer: "IEEE Pune Section",
+    location: "Pune, Maharashtra",
+    date: "17-19 June 2026",
+    category: "IEEE Conference",
+    image_url: "/images/profile/IEEE.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/IEEE.pdf",  // What downloads when they click the button
+    description: "Presented the paper “Implementation of HKDF for ChaCha20 Key Generation” at the International IEEE Conference on Innovation and Growth in Next-Gen Intelligent Technology & Engineering, IEEE Pune Section"
+  },
+
+       {
+    title: "National-Level Project Contest – Time-Multiplexed Neural Network",
+    issuer: "IEEE Pune Section",
+    location: "Smt. Kashibai Navale College of Engineering, Pune, Maharashtra",
+    date: "12 August 2026",
+    category: "IEEE Project Contest",
+    image_url: "/images/profile/Project.pdf", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/Project.pdf",  // What downloads when they click the button
+    description: "Participated in a national-level project contest and presented a Time-Multiplexed Neural Network project, conducted by IEEE Pune Section"
+       },
+
+     {
+    title: "National-Level Hackathon – Smart Military Base Security System",
+    issuer: "SIMATS Engineering",
+    location: "Chennai, Tamil Nadu",
+    date: "29 August 2026",
+    category: "National Level Hackathon",
+    image_url: "/images/profile/simats.jpeg", // The image you uploaded to the public folder
+    pdf_url:"/images/profile/simats.jpeg",  // What downloads when they click the button
+    description: "Participated in a national-level hackathon conducted by SIMATS Engineering, Chennai, and developed a Smart Military Base Security System"
+       }
     
 ];
 
@@ -247,22 +378,31 @@ export const certificates: Certificate[] = [
    EVENTS / PARTICIPATION
    ============================================================ */
 
+
 export const events: EventItem[] = [
   {
-    title: "Circuit Sprint — Yuva'2026",
-    organizer: "SIMATS Engineering",
-    date: "2026",
-    role: "Hardware Competition",
+    title: "Design Matrix",
+    organizer: "Technical Council – VLSI Student Club",
+    date: "July 2026",
+    role: "Technical Lead & Event Coordinator",
     description:
-      "Competed in high-speed circuit design and hardware debugging sprint as part of Yuva'2026."
+      "Conducted a VLSI design challenge where participants identified faulty or irregular logic-gate configurations and implemented the corrected circuit as a complete working system."
   },
   {
-    title: "AASHAV 2026",
-    organizer: "SIMATS Engineering",
-    date: "2026",
-    role: "Technical Hackathon",
+    title: "Circuit Sprint",
+    organizer: "Technical Council – VLSI Student Club",
+    date: "August 2026",
+    role: "Technical Lead & Event Coordinator",
     description:
-      "Participated in AASHAV 2026 technical hackathon with an embedded hardware and edge acceleration project."
+      "Conducted a VLSI-based design challenge where participants developed a functional college-campus system addressing a given problem statement and its specified design constraints."
+  },
+    {
+    title: "Yuva 2026 – National-Level VLSI Hackathon",
+    organizer: "Technical Council – VLSI Student Club",
+    date: "September 2026",
+    role: "Technical Lead & Event Coordinator",
+    description:
+      "Conducted a national-level VLSI hackathon where participants developed hardware prototypes based on a given VLSI problem statement, with the best prototypes recognized through first, second and third cash prizes"
   }
 ];
 
