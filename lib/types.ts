@@ -24,6 +24,7 @@ export type Project = {
   achievements?: string[]; 
   gallery?: { url: string; caption: string }[];
   github_url?: string;
+  paper_url?: string;
   featured: boolean;
 };
 
