@@ -166,14 +166,6 @@ export default async function ProjectPage({
                       src={img.url}
                       alt={img.caption}
                       style={{ width: "100%", height: "100%", maxHeight: "320px", objectFit: "contain", display: "block" }}
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (target.src.endsWith('.png')) {
-                          target.src = target.src.replace('.png', '.jpeg');
-                        } else if (target.src.endsWith('.jpeg')) {
-                          target.src = target.src.replace('.jpeg', '.jpg');
-                        }
-                      }}
                     />
                   </div>
                   <p style={{ fontSize: "12px", color: "var(--muted)", margin: "10px 0 0", fontFamily: '"DM Mono", monospace' }}>
