@@ -177,15 +177,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/zero_latency_schematic.png",
+        url: "/images/profile/zero_latency_schematic.jpeg",
         caption: "RTL Schematic: Synthesized pure combinational logic network for clockless neural inference."
       },
       {
-        url: "/images/profile/zero_latency_waveform.png",
+        url: "/images/profile/zero_latency_waveform.jpeg",
         caption: "Post-Route Timing Simulation: Measured propagation delay showing valid output within ~5 ns."
       },
       {
-        url: "/images/profile/zero_latency_thermal.png",
+        url: "/images/profile/zero_latency_thermal.jpeg",
         caption: "Hardware Verification: Multicore thermal stress testbench with real-time preemption response."
       }
     ],
@@ -237,15 +237,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/snn_datapath.png",
+        url: "/images/profile/snn_datapath.jpeg",
         caption: "LIF Datapath Architecture: Time-multiplexed membrane potential update and spike generator."
       },
       {
-        url: "/images/profile/snn_simulation.png",
+        url: "/images/profile/snn_simulation.jpeg",
         caption: "ModelSim Spike Waveform: Discrete spike train firing and membrane potential decay dynamics."
       },
       {
-        url: "/images/profile/snn_resource.png",
+        url: "/images/profile/snn_resource.jpeg",
         caption: "Vivado Synthesis Report: Resource utilization showing <1% LUT slice and 0 DSP slice footprint."
       }
     ],
@@ -301,15 +301,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/noc_arch.png",
+        url: "/images/profile/noc_arch.jpeg",
         caption: "2x2 Mesh NoC Architecture: Pipelined XY routing fabric and packet arbitration logic."
       },
       {
-        url: "/images/profile/noc_fpga_board.png",
+        url: "/images/profile/noc_fpga_board.jpeg",
         caption: "Hardware Integration Testbench: Zynq-7000 FPGA interfacing with ESP32 sensor acquisition node."
       },
       {
-        url: "/images/profile/noc_sensor_stream.png",
+        url: "/images/profile/noc_sensor_stream.jpeg",
         caption: "Real-Time Sensor Telemetry: Concurrent streaming of PPG, temperature, and 6-axis IMU data."
       }
     ],
@@ -361,15 +361,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/chacha20_pipeline.png",
+        url: "/images/profile/chacha20_pipeline.jpeg",
         caption: "ChaCha20 Architecture: 20-round unrolled quarter-round datapath with matrix rotation logic."
       },
       {
-        url: "/images/profile/hkdf_nist_verify.png",
+        url: "/images/profile/hkdf_nist_verify.jpeg",
         caption: "NIST Verification Testbench: Bit-accurate functional validation against NIST test vectors."
       },
       {
-        url: "/images/profile/chacha20_vivado.png",
+        url: "/images/profile/chacha20_vivado.jpeg",
         caption: "Vivado Implementation Summary: Clock frequency Fmax and timing slack closure."
       }
     ],
@@ -422,15 +422,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/analog_lab_1.png",
+        url: "/images/profile/analog_lab_1.jpeg",
         caption: "Breadboard Prototype: Discrete BJT amplifier and operational amplifier biasing circuit."
       },
       {
-        url: "/images/profile/analog_lab_2.png",
+        url: "/images/profile/analog_lab_2.jpeg",
         caption: "Oscilloscope Waveform: Multivibrator output square wave and timing capacitor charge dynamics."
       },
       {
-        url: "/images/profile/analog_lab_3.png",
+        url: "/images/profile/analog_lab_3.jpeg",
         caption: "Laboratory Testbench: Function generator input sweep and frequency response analysis."
       }
     ],
@@ -477,15 +477,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/digital_ic_1.png",
+        url: "/images/profile/digital_ic_1.jpeg",
         caption: "Digital IC Trainer Kit: Complete wiring of 74-series combinational logic circuitry."
       },
       {
-        url: "/images/profile/digital_ic_2.png",
+        url: "/images/profile/digital_ic_2.jpeg",
         caption: "Sequential Logic Setup: Master-slave flip-flops and 4-bit binary counter verification."
       },
       {
-        url: "/images/profile/digital_ic_3.png",
+        url: "/images/profile/digital_ic_3.jpeg",
         caption: "Hardware Verification: Logic level state LEDs and switch pulse clock testing."
       }
     ],
@@ -533,15 +533,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/irrigation_arduino_1.png",
+        url: "/images/profile/irrigation_arduino_1.jpeg",
         caption: "Embedded Hardware Setup: Arduino controller interfaced with relay module and submersible pump."
       },
       {
-        url: "/images/profile/irrigation_arduino_2.png",
+        url: "/images/profile/irrigation_arduino_2.jpeg",
         caption: "Sensor Calibration: Soil moisture probe testing across saturated and dry soil samples."
       },
       {
-        url: "/images/profile/irrigation_arduino_3.png",
+        url: "/images/profile/irrigation_arduino_3.jpeg",
         caption: "System Execution: Automatic pump actuation and LED/buzzer alert status."
       }
     ],
@@ -588,15 +588,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/student_portal_1.png",
+        url: "/images/profile/student_portal_1.jpeg",
         caption: "Analytics Dashboard: Real-time student attendance percentages and grade distribution."
       },
       {
-        url: "/images/profile/student_portal_2.png",
+        url: "/images/profile/student_portal_2.jpeg",
         caption: "Faculty Portal: Course management, internal mark entry, and performance charts."
       },
       {
-        url: "/images/profile/student_portal_3.png",
+        url: "/images/profile/student_portal_3.jpeg",
         caption: "Database Architecture: Relational data schema for student records and course mappings."
       }
     ],
@@ -647,15 +647,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/irrigation_esp_1.png",
+        url: "/images/profile/irrigation_esp_1.jpeg",
         caption: "IoT Node Hardware: ESP8266 connected with 0.96\" OLED, relay, and capacitive sensor."
       },
       {
-        url: "/images/profile/irrigation_esp_2.png",
+        url: "/images/profile/irrigation_esp_2.jpeg",
         caption: "Live OLED Readout: Real-time display of soil moisture percentage, humidity, and pump status."
       },
       {
-        url: "/images/profile/irrigation_esp_3.png",
+        url: "/images/profile/irrigation_esp_3.jpeg",
         caption: "Terraced Terrain Testbench: Elevation gradient simulation for zoned water distribution."
       }
     ],
@@ -705,15 +705,15 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        url: "/images/profile/sentinel_seismic_1.png",
+        url: "/images/profile/sentinel_seismic_1.jpeg",
         caption: "Sensor Front-End: Piezoelectric seismic transducer and low-noise analog amplifier stage."
       },
       {
-        url: "/images/profile/sentinel_seismic_2.png",
+        url: "/images/profile/sentinel_seismic_2.jpeg",
         caption: "Signal Oscilloscope Trace: Real-time ground vibrational impulse and decay envelope."
       },
       {
-        url: "/images/profile/sentinel_seismic_3.png",
+        url: "/images/profile/sentinel_seismic_3.jpeg",
         caption: "Classification Terminal: Edge detection output discriminating footsteps and vehicular motion."
       }
     ],
@@ -830,7 +830,7 @@ export const certificates: Certificate[] = [
     location: "Online",
     date: "April 2025",
     category: "Placement Preparation",
-    image_url:"/images/profile/udemy.jpeg",
+    image_url: "/images/profile/udemy.jpeg",
     pdf_url: "/images/profile/udemy.jpeg",
     description:
       "Enrolled in a Udemy course on quantitative aptitude to strengthen numerical reasoning and problem-solving skills."
@@ -853,7 +853,7 @@ export const certificates: Certificate[] = [
     date: "24-25 September 2025",
     category: "Faculty Development Program",
     image_url: "/images/profile/5g_application.jpeg",
-    pdf_url: "/images/profile/5g_application.jpeg",
+    pdf_url: "/images/profile/5g_application.pdf",
     description:
       "Attended a five-day Faculty Development Program on antenna design for advanced 5G applications."
   },
@@ -874,8 +874,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "27–28 November and 3–5 December 2025",
     category: "Industry Training",
-    image_url: "/images/profile/industry training.jpeg",
-    pdf_url: "/images/profile/industry training.jpeg",
+    image_url: "/images/profile/Industry_training.jpeg",
+    pdf_url: "/images/profile/Industry_training.pdf",
     description:
       "Attended a five-day industry connect training program on exploring Frequency Selective Surfaces using CST Studio Suite."
   },
@@ -886,7 +886,7 @@ export const certificates: Certificate[] = [
     date: "29 December 2025 to 29 January 2026",
     category: "Internship",
     image_url: "/images/profile/CodecTechnologies.jpeg",
-    pdf_url: "/images/profile/CodecTechnologies.jpeg",
+    pdf_url: "/images/profile/CodecTechnologies.pdf",
     description:
       "Completed a one-month VLSI project internship at CODEC Technologies, working on the implementation of digital circuits using Verilog HDL."
   },
@@ -919,7 +919,7 @@ export const certificates: Certificate[] = [
     date: "18 March 2026",
     category: "Hackathon",
     image_url: "/images/profile/ideathon.jpeg",
-    pdf_url: "/images/profile/ideathon.jpeg",
+    pdf_url: "/images/profile/ideathon.pdf",
     description:
       "Selected for the final round of Smart India Hackathon (SIH) 2026 under the theme “IoT Automation”."
   },
@@ -930,7 +930,7 @@ export const certificates: Certificate[] = [
     date: "25 May 2026 - 25 June 2026",
     category: "Internship",
     image_url: "/images/profile/NIT.jpeg",
-    pdf_url: "/images/profile/NIT.jpeg",
+    pdf_url: "/images/profile/NIT.pdf",
     description:
       "Completed a one-month hardware research internship at NIT Tiruchirappalli, working on neuromorphic computing and spiking neural-network architectures."
   },
@@ -941,7 +941,7 @@ export const certificates: Certificate[] = [
     date: "17-19 June 2026",
     category: "IEEE Conference",
     image_url: "/images/profile/IEEE.jpeg",
-    pdf_url: "/images/profile/IEEE.jpeg",
+    pdf_url: "/images/profile/IEEE.pdf",
     description:
       "Presented the paper “Implementation of HKDF for ChaCha20 Key Generation” at the International IEEE Conference."
   },
@@ -952,7 +952,7 @@ export const certificates: Certificate[] = [
     date: "12 August 2026",
     category: "IEEE Project Contest",
     image_url: "/images/profile/Project contest Certificate.jpeg",
-    pdf_url: "/images/profile/Project contest Certificate.jpeg",
+    pdf_url: "/images/profile/Project contest Certificate.pdf",
     description:
       "Participated in a national-level project contest and presented a Time-Multiplexed Neural Network project."
   },
