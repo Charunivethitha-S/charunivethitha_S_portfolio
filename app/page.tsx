@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -37,6 +37,14 @@ import {
 
 export default function Home() {
   const [projectIndex, setProjectIndex] = useState(0);
+  const certsRef = useRef<HTMLDivElement>(null);
+
+  const scrollCerts = (direction: 'left' | 'right') => {
+    if (certsRef.current) {
+      const scrollAmount = direction === 'left' ? -340 : 340;
+      certsRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const featuredProjects = projects.filter((p) => p.featured);
   const additionalProjects = projects.filter((p) => !p.featured);
@@ -449,13 +457,24 @@ export default function Home() {
         <section className="section" id="certificates">
           <div className="container">
 
-            <SectionHeader
-              kicker="05 — technical certificates"
-              title="Specialized Training & Certifications."
-              text="Verified coursework in VLSI fundamentals, HDL programming, and applied computing."
-            />
+            <div className="certs-header-row">
+              <SectionHeader
+                kicker="05 — technical certificates"
+                title="Specialized Training & Certifications."
+                text="Verified coursework in VLSI fundamentals, HDL programming, and applied computing."
+              />
+              
+              <div className="certs-nav-buttons">
+                <button onClick={() => scrollCerts('left')} aria-label="Previous certificates">
+                  <ChevronLeft size={20} />
+                </button>
+                <button onClick={() => scrollCerts('right')} aria-label="Next certificates">
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
 
-            <div className="certs-grid">
+            <div className="certs-carousel" ref={certsRef}>
               {certificates.map((cert) => (
                 <div className="cert-card-v2" key={cert.title}>
                   
