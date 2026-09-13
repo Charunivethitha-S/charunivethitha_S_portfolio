@@ -1,7 +1,7 @@
 import { projects } from "@/lib/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ExternalLink, Award, CheckCircle2, ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink, Cpu, Code2, Layers } from "lucide-react";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -20,195 +20,171 @@ export default async function ProjectPage({
   }
 
   return (
-    <main className="min-h-screen bg-[#07090e] text-[#f3f4f6] px-4 py-8 md:py-16">
-      <div className="max-w-5xl mx-auto space-y-12">
+    <main className="section" style={{ minHeight: "100vh", paddingTop: "120px" }}>
+      <div className="container">
+        
         {/* Back Link */}
-        <div>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm text-[#9ca3af] hover:text-[#67e8f9] transition-colors"
-          >
-            <ArrowLeft size={16} /> Back to Portfolio
+        <div style={{ marginBottom: "24px" }}>
+          <Link href="/#projects" className="back">
+            <ArrowLeft size={14} /> Back to All Projects
           </Link>
         </div>
 
         {/* Header Section */}
-        <header className="space-y-4 border-b border-[#1f293d] pb-8">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-xs font-mono tracking-widest text-[#67e8f9] uppercase bg-[#0f172a] px-3 py-1 rounded-full border border-[#1e293b]">
-              {project.category}
+        <div style={{ marginBottom: "40px" }}>
+          <div style={{ display: "flex", gap: "10px", alignItems: "center", flexWrap: "wrap", marginBottom: "16px" }}>
+            <span className="section-kicker" style={{ margin: 0 }}>
+              0{project.featured ? "1" : "2"} — {project.category}
             </span>
-            <span className="text-xs font-mono text-[#9ca3af]">{project.timeline}</span>
+            {project.timeline && (
+              <span className="card-time-badge" style={{ fontSize: "11px" }}>
+                {project.timeline}
+              </span>
+            )}
             {project.patent_status && (
-              <span className="inline-flex items-center gap-1.5 text-xs font-mono text-[#4ade80] bg-[#064e3b]/40 px-3 py-1 rounded-full border border-[#059669]/50">
-                <Award size={14} /> {project.patent_status}
+              <span className="pub-tag patent-tag" style={{ margin: 0, fontWeight: 700 }}>
+                🏆 {project.patent_status}
               </span>
             )}
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-black tracking-tight text-white uppercase font-mono leading-tight">
+          <h1 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 16px", color: "#fff" }}>
             {project.title}
           </h1>
 
-          <p className="text-lg md:text-xl text-[#9ca3af] max-w-3xl leading-relaxed">
+          <p style={{ fontSize: "16px", color: "var(--muted)", maxWidth: "800px", lineHeight: 1.7, margin: "0 0 24px" }}>
             {project.summary}
           </p>
 
-          {project.github_url && (
-            <div className="pt-2 flex flex-wrap gap-4">
-              <a
-                href={project.github_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#67e8f9] text-[#07090e] font-bold rounded-lg hover:bg-[#22d3ee] transition-all text-sm"
-              >
-                View Repository on GitHub <ExternalLink size={16} />
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            {project.github_url && (
+              <a className="btn primary" href={project.github_url} target="_blank" rel="noreferrer">
+                GitHub Repository <ExternalLink size={14} />
               </a>
-              {project.paper_url && (
-                <a
-                  href={project.paper_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1e293b] text-white font-bold rounded-lg border border-[#334155] hover:bg-[#334155] transition-all text-sm"
-                >
-                  Read Paper / Publication <ExternalLink size={16} />
-                </a>
-              )}
-            </div>
-          )}
-        </header>
+            )}
+            {project.paper_url && (
+              <a className="btn" href={project.paper_url} target="_blank" rel="noreferrer">
+                Research Publication <ExternalLink size={14} />
+              </a>
+            )}
+          </div>
+        </div>
 
         {/* Abstract & Detailed Description */}
-        <section className="bg-[#0b0f19] p-6 md:p-8 rounded-2xl border border-[#1f293d] space-y-4">
-          <h2 className="text-xl font-bold font-mono text-[#67e8f9] flex items-center gap-2">
-            Abstract & Technical Overview
-          </h2>
-          <p className="text-[#d1d5db] leading-relaxed text-base md:text-lg">
+        <div className="pub-pat-card" style={{ marginBottom: "32px", padding: "28px" }}>
+          <div className="section-kicker" style={{ marginBottom: "8px" }}>ABSTRACT & TECHNICAL OVERVIEW</div>
+          <p style={{ fontSize: "15px", lineHeight: "1.8", color: "var(--text)", margin: 0 }}>
             {project.description}
           </p>
-        </section>
+        </div>
 
-        {/* Benchmark & Metrics Grid */}
+        {/* Benchmark Metrics Grid */}
         {project.metrics && project.metrics.length > 0 && (
-          <section className="space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-widest text-[#9ca3af]">
-              Performance & Benchmark Metrics
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div style={{ marginBottom: "32px" }}>
+            <div className="section-kicker" style={{ marginBottom: "12px" }}>MEASURED BENCHMARKS & PERFORMANCE</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "14px" }}>
               {project.metrics.map((m, idx) => (
-                <div
-                  key={idx}
-                  className="bg-[#0d1322] border border-[#1e293b] p-5 rounded-xl text-center space-y-1 hover:border-[#67e8f9]/40 transition-all"
-                >
-                  <div className="text-2xl md:text-3xl font-black text-[#67e8f9] font-mono">
-                    {m.value}
-                  </div>
-                  <div className="text-xs text-[#9ca3af] leading-tight font-sans">
-                    {m.label}
-                  </div>
+                <div key={idx} className="metric-item" style={{ padding: "14px 18px" }}>
+                  <b style={{ fontSize: "20px", color: "var(--cyan)" }}>{m.value}</b>
+                  <small style={{ fontSize: "10px", color: "var(--muted)" }}>{m.label}</small>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
         )}
 
-        {/* 3 Square Technology / Architecture Blocks */}
-        <section className="space-y-4">
-          <h3 className="text-sm font-mono uppercase tracking-widest text-[#9ca3af]">
-            System Architecture & Tech Stack
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Block 1: Hardware */}
-            <div className="bg-[#0b0f19] border border-[#1e293b] p-6 rounded-2xl space-y-3">
-              <div className="text-xs font-mono uppercase tracking-wider text-[#67e8f9] border-b border-[#1e293b] pb-2">
-                Hardware Components
+        {/* 3 Tech Stack / Architecture Boxes */}
+        <div style={{ marginBottom: "32px" }}>
+          <div className="section-kicker" style={{ marginBottom: "12px" }}>SYSTEM ARCHITECTURE & TECH STACK</div>
+          <div className="tech-box-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
+            
+            {/* Box 1: Hardware */}
+            <div className="tech-box" style={{ padding: "18px" }}>
+              <div className="tech-box-title" style={{ fontSize: "11px", marginBottom: "12px" }}>
+                <Cpu size={14} className="text-cyan" />
+                <span>HARDWARE COMPONENTS</span>
               </div>
-              <ul className="space-y-2 text-sm text-[#d1d5db]">
-                {project.hardware.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-[#67e8f9] mt-1">•</span>
-                    <span>{item}</span>
-                  </li>
+              <div className="tech-chips-wrap">
+                {project.hardware.map((h, i) => (
+                  <span key={i} className="tech-chip-item hw" style={{ fontSize: "12px", padding: "4px 10px" }}>{h}</span>
                 ))}
-              </ul>
+              </div>
             </div>
 
-            {/* Block 2: Software */}
-            <div className="bg-[#0b0f19] border border-[#1e293b] p-6 rounded-2xl space-y-3">
-              <div className="text-xs font-mono uppercase tracking-wider text-[#67e8f9] border-b border-[#1e293b] pb-2">
-                Software & EDA Tools
+            {/* Box 2: Software */}
+            <div className="tech-box" style={{ padding: "18px" }}>
+              <div className="tech-box-title" style={{ fontSize: "11px", marginBottom: "12px" }}>
+                <Code2 size={14} className="text-violet" />
+                <span>SOFTWARE & EDA TOOLS</span>
               </div>
-              <ul className="space-y-2 text-sm text-[#d1d5db]">
-                {project.software.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-[#67e8f9] mt-1">•</span>
-                    <span>{item}</span>
-                  </li>
+              <div className="tech-chips-wrap">
+                {project.software.map((s, i) => (
+                  <span key={i} className="tech-chip-item sw" style={{ fontSize: "12px", padding: "4px 10px" }}>{s}</span>
                 ))}
-              </ul>
+              </div>
             </div>
 
-            {/* Block 3: Technologies */}
-            <div className="bg-[#0b0f19] border border-[#1e293b] p-6 rounded-2xl space-y-3">
-              <div className="text-xs font-mono uppercase tracking-wider text-[#67e8f9] border-b border-[#1e293b] pb-2">
-                Technologies & Protocols
+            {/* Box 3: Technologies */}
+            <div className="tech-box" style={{ padding: "18px" }}>
+              <div className="tech-box-title" style={{ fontSize: "11px", marginBottom: "12px" }}>
+                <Layers size={14} style={{ color: "var(--gold)" }} />
+                <span>TECHNOLOGIES & PROTOCOLS</span>
               </div>
-              <ul className="space-y-2 text-sm text-[#d1d5db]">
-                {project.technologies.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-[#67e8f9] mt-1">•</span>
-                    <span>{item}</span>
-                  </li>
+              <div className="tech-chips-wrap">
+                {project.technologies.map((t, i) => (
+                  <span key={i} className="tech-chip-item" style={{ fontSize: "12px", padding: "4px 10px" }}>{t}</span>
                 ))}
-              </ul>
+              </div>
             </div>
+
           </div>
-        </section>
+        </div>
 
-        {/* Boxed Key Achievements */}
+        {/* Key Achievements Box */}
         {project.achievements && project.achievements.length > 0 && (
-          <section className="bg-[#081225] border border-[#1e3a8a]/40 p-6 md:p-8 rounded-2xl space-y-4">
-            <h3 className="text-lg font-bold font-mono text-[#38bdf8] flex items-center gap-2">
-              <CheckCircle2 className="text-[#38bdf8]" size={20} /> Project Achievements & Key Deliverables
-            </h3>
-            <ul className="space-y-3">
+          <div className="pub-pat-card patent" style={{ marginBottom: "40px", padding: "28px" }}>
+            <div className="section-kicker" style={{ color: "var(--gold)", marginBottom: "12px" }}>KEY ACHIEVEMENTS & DELIVERABLES</div>
+            <ul style={{ paddingLeft: "20px", margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
               {project.achievements.map((ach, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-sm md:text-base text-[#cbd5e1]">
-                  <span className="text-[#38bdf8] font-bold mt-0.5">✓</span>
-                  <span>{ach}</span>
+                <li key={idx} style={{ color: "var(--text)", fontSize: "14px", lineHeight: "1.6" }}>
+                  {ach}
                 </li>
               ))}
             </ul>
-          </section>
+          </div>
         )}
 
-        {/* Diagram & Image Gallery */}
+        {/* Gallery Section */}
         {project.gallery && project.gallery.length > 0 && (
-          <section className="space-y-6">
-            <h3 className="text-sm font-mono uppercase tracking-widest text-[#9ca3af]">
-              RTL Schematics, Waveforms & Hardware Photographs
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <div className="section-kicker" style={{ marginBottom: "16px" }}>RTL SCHEMATICS, WAVEFORMS & HARDWARE PHOTOS</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
               {project.gallery.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="bg-[#0b0f19] border border-[#1e293b] rounded-2xl overflow-hidden group hover:border-[#67e8f9]/50 transition-all space-y-3 p-4"
-                >
-                  <div className="relative aspect-video bg-[#05070a] rounded-xl overflow-hidden border border-[#1e293b] flex items-center justify-center">
+                <div key={idx} className="pub-pat-card" style={{ padding: "14px", margin: 0 }}>
+                  <div style={{ width: "100%", maxHeight: "320px", borderRadius: "12px", overflow: "hidden", background: "#000", display: "flex", itemsCenter: "center", justifyContent: "center" }}>
                     <img
                       src={img.url}
                       alt={img.caption}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      style={{ width: "100%", height: "100%", maxHeight: "320px", objectFit: "contain", display: "block" }}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.endsWith('.png')) {
+                          target.src = target.src.replace('.png', '.jpeg');
+                        } else if (target.src.endsWith('.jpeg')) {
+                          target.src = target.src.replace('.jpeg', '.jpg');
+                        }
+                      }}
                     />
                   </div>
-                  <p className="text-xs text-[#9ca3af] font-mono leading-relaxed px-1">
-                    <strong className="text-[#67e8f9]">Fig {idx + 1}:</strong> {img.caption}
+                  <p style={{ fontSize: "12px", color: "var(--muted)", margin: "10px 0 0", fontFamily: '"DM Mono", monospace' }}>
+                    <strong style={{ color: "var(--cyan)" }}>Fig {idx + 1}:</strong> {img.caption}
                   </p>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
         )}
+
       </div>
     </main>
   );
