@@ -256,8 +256,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "24-25 September 2025",
     category: "Faculty Development Program",
-    image_url: "",
-    pdf_url: "/images/profile/5g_application.pdf",
+    image_url: "/images/profile/5g_application.jpeg",
+    pdf_url: "/images/profile/5g_application.jpeg",
     description:
       "Attended a five-day Faculty Development Program on antenna design for advanced 5G applications."
   },
@@ -278,8 +278,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "27–28 November and 3–5 December 2025",
     category: "Industry Training",
-    image_url: "",
-    pdf_url: "/images/profile/industry_training.pdf",
+    image_url: "/images/profile/industry_training.jpeg",
+    pdf_url: "/images/profile/industry_training.jpeg",
     description:
       "Attended a five-day industry connect training program on exploring Frequency Selective Surfaces using CST Studio Suite."
   },
@@ -289,8 +289,8 @@ export const certificates: Certificate[] = [
     location: "Hyderabad, Telangana",
     date: "29 December 2025 to 29 January 2026",
     category: "Internship",
-    image_url: "",
-    pdf_url: "/images/profile/CodecTechnologies.pdf",
+    image_url: "/images/profile/CodecTechnologies.jpeg",
+    pdf_url: "/images/profile/CodecTechnologies.jpeg",
     description:
       "Completed a one-month VLSI project internship at CODEC Technologies, working on the implementation of digital circuits using Verilog HDL."
   },
@@ -311,8 +311,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "18 March 2026",
     category: "Hackathon",
-    image_url: "",
-    pdf_url: "#",
+    image_url: "/images/profile/website.jpeg",
+    pdf_url: "/images/profile/website.jpeg",
     description:
       "Participated in the Code-a-thon and developed a web-based Student Performance and Attendance Monitoring System."
   },
@@ -322,8 +322,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "18 March 2026",
     category: "Hackathon",
-    image_url: "",
-    pdf_url: "/images/profile/ideathon.pdf",
+    image_url: "/images/profile/ideathon.jpeg",
+    pdf_url: "/images/profile/ideathon.jpeg",
     description:
       "Selected for the final round of Smart India Hackathon (SIH) 2026 under the theme “IoT Automation”."
   },
@@ -333,8 +333,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "25 May 2026 - 25 June 2026",
     category: "Internship",
-    image_url: "",
-    pdf_url: "/images/profile/NIT.pdf",
+    image_url: "/images/profile/NIT.jpeg",
+    pdf_url: "/images/profile/NIT.jpeg",
     description:
       "Completed a one-month hardware research internship at NIT Tiruchirappalli, working on neuromorphic computing and spiking neural-network architectures."
   },
@@ -344,8 +344,8 @@ export const certificates: Certificate[] = [
     location: "Pune, Maharashtra",
     date: "17-19 June 2026",
     category: "IEEE Conference",
-    image_url: "",
-    pdf_url: "/images/profile/IEEE.pdf",
+    image_url: "/images/profile/IEEE.jpeg",
+    pdf_url: "/images/profile/IEEE.jpeg",
     description:
       "Presented the paper “Implementation of HKDF for ChaCha20 Key Generation” at the International IEEE Conference."
   },
@@ -355,8 +355,8 @@ export const certificates: Certificate[] = [
     location: "Smt. Kashibai Navale College of Engineering, Pune, Maharashtra",
     date: "12 August 2026",
     category: "IEEE Project Contest",
-    image_url: "",
-    pdf_url: "/images/profile/Project contest Certificate.pdf",
+    image_url: "/images/profile/Project contest Certificate.jpeg",
+    pdf_url: "/images/profile/Project contest Certificate.jpeg",
     description:
       "Participated in a national-level project contest and presented a Time-Multiplexed Neural Network project."
   },
