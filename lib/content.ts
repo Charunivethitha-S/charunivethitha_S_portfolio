@@ -874,8 +874,8 @@ export const certificates: Certificate[] = [
     location: "Tiruchirapalli, Tamil Nadu",
     date: "27–28 November and 3–5 December 2025",
     category: "Industry Training",
-    image_url: "/images/profile/Industry_training.jpeg",
-    pdf_url: "/images/profile/Industry_training.pdf",
+    image_url: "/images/profile/industry_training.jpeg",
+    pdf_url: "/images/profile/industry_training.pdf",
     description:
       "Attended a five-day industry connect training program on exploring Frequency Selective Surfaces using CST Studio Suite."
   },
